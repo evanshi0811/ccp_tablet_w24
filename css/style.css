@@ -179,3 +179,15 @@ hr {
       display: none !important;
     }
 }
+
+@media only screen and (min-width: 750px) {
+    .grid1 {
+        margin: 0 20vw 25px 20vw;
+    }
+    nav {
+        display: none;
+    }
+    main {
+        margin-left: 8vw;
+    }
+}
