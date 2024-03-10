@@ -6,6 +6,38 @@
     <link rel = "stylesheet" type = "text/css" href = "css/html5reset.css">
     <link rel = "stylesheet" type = "text/css" href = "css/style.css">
     <title>Home</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var button = document.getElementById('hamburgerbutton');
+            var sidebar = document.querySelector('.sidebar');
+            var main = document.querySelector('main');
+            var navlinks = document.querySelector('.navlinks');
+
+            button.addEventListener('click', function() {
+                if (sidebar.classList.contains('sidebar-expand')) {
+                    sidebar.classList.remove('sidebar-expand');
+                    sidebar.classList.add('sidebar-collapse');
+                } else {
+                    sidebar.classList.remove('sidebar-collapse');
+                    sidebar.classList.add('sidebar-expand');
+                }
+                if (main.classList.contains('main-expand')) {
+                    main.classList.remove('main-expand');
+                    main.classList.add('main-collapse');
+                } else {
+                    main.classList.remove('main-collapse');
+                    main.classList.add('main-expand');
+                }
+                if (navlinks.classList.contains('navlinks-expand')) {
+                    navlinks.classList.remove('navlinks-expand');
+                    navlinks.classList.add('navlinks-collapse');
+                } else {
+                    navlinks.classList.remove('navlinks-collapse');
+                    navlinks.classList.add('navlinks-expand');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -21,6 +53,58 @@
             </ul>
         </nav>
     </header>
+    <div class = "sidebar">
+        <button id="hamburgerbutton"  aria-pressed="false">
+            <img src = "images/Hamburger_icon.svg.png" alt = "Hamburger menu icon">
+        </button>
+        <div class = "navlinks">
+            <a class = "active" href = "index.html">
+                Home
+            </a>
+            <a href = "pets.html">
+                Pets
+            </a>
+            <a class = "sublink" href = "pets.html#rocket">
+                Rocket
+            </a>
+            <a class = "sublink" href = "pets.html#lulu">
+                Lulu
+            </a>
+            <a class = "sublink" href = "pets.html#chako">
+                Chako
+            </a>
+            <a href = "recipes.html">
+                Recipes
+            </a>
+            <a class = "sublink" href = "recipes.html#mac">
+                Homemade Mac & Cheese
+            </a>
+            <a class = "sublink" href = "recipes.html#pancakes">
+                Swedish Pancakes
+            </a>
+            <a class = "sublink" href = "recipes.html#fritters">
+                Zucchini Fritters
+            </a>
+            <a href = "travel.html">
+                Travel
+            </a>
+            <a class = "sublink" href = "travel.html#vermont">
+                Vermont
+            </a>
+            <a class = "sublink" href = "travel.html#shanghai">
+                Shanghai
+            </a>
+            <a class = "sublink" href = "travel.html#rome">
+                Rome
+            </a>
+            <a class = "sublink" href = "travel.html#monteverde">
+                Monteverde
+            </a>
+            <a class = "sublink" href = "travel.html#seattle">
+                Seattle
+            </a>
+        </div>
+    </div>
     <main id="main">
         <h1>Home</h1>
         <div>
