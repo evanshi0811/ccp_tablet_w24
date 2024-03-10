@@ -10,7 +10,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             var button = document.getElementById('hamburgerbutton');
             var sidebar = document.querySelector('.sidebar');
-            var main = document.querySelector('main');
+            var maincontent = document.querySelector('.maincontent');
             var navlinks = document.querySelector('.navlinks');
 
             button.addEventListener('click', function() {
@@ -21,12 +21,12 @@
                     sidebar.classList.remove('sidebar-collapse');
                     sidebar.classList.add('sidebar-expand');
                 }
-                if (main.classList.contains('main-expand')) {
-                    main.classList.remove('main-expand');
-                    main.classList.add('main-collapse');
+                if (maincontent.classList.contains('maincontent-expand')) {
+                    maincontent.classList.remove('maincontent-expand');
+                    maincontent.classList.add('maincontent-collapse');
                 } else {
-                    main.classList.remove('main-collapse');
-                    main.classList.add('main-expand');
+                    maincontent.classList.remove('maincontent-collapse');
+                    maincontent.classList.add('maincontent-expand');
                 }
                 if (navlinks.classList.contains('navlinks-expand')) {
                     navlinks.classList.remove('navlinks-expand');
@@ -53,64 +53,66 @@
             </ul>
         </nav>
     </header>
-    <div class = "sidebar">
-        <button id="hamburgerbutton"  aria-pressed="false">
-            <img src = "images/Hamburger_icon.svg.png" alt = "Hamburger menu icon">
-        </button>
-        <div class = "navlinks">
-            <a class = "active" href = "index.html">
-                Home
-            </a>
-            <a href = "pets.html">
-                Pets
-            </a>
-            <a class = "sublink" href = "pets.html#rocket">
-                Rocket
-            </a>
-            <a class = "sublink" href = "pets.html#lulu">
-                Lulu
-            </a>
-            <a class = "sublink" href = "pets.html#chako">
-                Chako
-            </a>
-            <a href = "recipes.html">
-                Recipes
-            </a>
-            <a class = "sublink" href = "recipes.html#mac">
-                Homemade Mac & Cheese
-            </a>
-            <a class = "sublink" href = "recipes.html#pancakes">
-                Swedish Pancakes
-            </a>
-            <a class = "sublink" href = "recipes.html#fritters">
-                Zucchini Fritters
-            </a>
-            <a href = "travel.html">
-                Travel
-            </a>
-            <a class = "sublink" href = "travel.html#vermont">
-                Vermont
-            </a>
-            <a class = "sublink" href = "travel.html#shanghai">
-                Shanghai
-            </a>
-            <a class = "sublink" href = "travel.html#rome">
-                Rome
-            </a>
-            <a class = "sublink" href = "travel.html#monteverde">
-                Monteverde
-            </a>
-            <a class = "sublink" href = "travel.html#seattle">
-                Seattle
-            </a>
-        </div>
-    </div>
     <main id="main">
-        <h1>Home</h1>
-        <div>
-            <hr class="solid">
-            <p>Welcome to Evan's Epically Exciting Page, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures.</p>
-            <p>My creativity is very limited so this is the extent of my home page for now.</p>
+        <div class = "sidebar">
+            <button id="hamburgerbutton"  aria-pressed="false">
+                <img src = "images/Hamburger_icon.svg.png" alt = "Hamburger menu icon">
+            </button>
+            <div class = "navlinks">
+                <a class = "active" href = "index.html">
+                    Home
+                </a>
+                <a href = "pets.html">
+                    Pets
+                </a>
+                <a class = "sublink" href = "pets.html#rocket">
+                    Rocket
+                </a>
+                <a class = "sublink" href = "pets.html#lulu">
+                    Lulu
+                </a>
+                <a class = "sublink" href = "pets.html#chako">
+                    Chako
+                </a>
+                <a href = "recipes.html">
+                    Recipes
+                </a>
+                <a class = "sublink" href = "recipes.html#mac">
+                    Homemade Mac & Cheese
+                </a>
+                <a class = "sublink" href = "recipes.html#pancakes">
+                    Swedish Pancakes
+                </a>
+                <a class = "sublink" href = "recipes.html#fritters">
+                    Zucchini Fritters
+                </a>
+                <a href = "travel.html">
+                    Travel
+                </a>
+                <a class = "sublink" href = "travel.html#vermont">
+                    Vermont
+                </a>
+                <a class = "sublink" href = "travel.html#shanghai">
+                    Shanghai
+                </a>
+                <a class = "sublink" href = "travel.html#rome">
+                    Rome
+                </a>
+                <a class = "sublink" href = "travel.html#monteverde">
+                    Monteverde
+                </a>
+                <a class = "sublink" href = "travel.html#seattle">
+                    Seattle
+                </a>
+            </div>
+        </div>
+        <div class = "maincontent">
+            <h1>Home</h1>
+            <div>
+                <hr class="solid">
+                <p>Welcome to Evan's Epically Exciting Page, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures.</p>
+                <p>My creativity is very limited so this is the extent of my home page for now.</p>
+            </div>
         </div>
     </main>
 </body>

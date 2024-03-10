@@ -10,7 +10,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             var button = document.getElementById('hamburgerbutton');
             var sidebar = document.querySelector('.sidebar');
-            var main = document.querySelector('main');
+            var maincontent = document.querySelector('.maincontent');
             var footer = document.querySelector('footer');
             var navlinks = document.querySelector('.navlinks');
 
@@ -22,12 +22,12 @@
                     sidebar.classList.remove('sidebar-collapse');
                     sidebar.classList.add('sidebar-expand');
                 }
-                if (main.classList.contains('main-expand')) {
-                    main.classList.remove('main-expand');
-                    main.classList.add('main-collapse');
+                if (maincontent.classList.contains('maincontent-expand')) {
+                    maincontent.classList.remove('maincontent-expand');
+                    maincontent.classList.add('maincontent-collapse');
                 } else {
-                    main.classList.remove('main-collapse');
-                    main.classList.add('main-expand');
+                    maincontent.classList.remove('maincontent-collapse');
+                    maincontent.classList.add('maincontent-expand');
                 }
                 if (footer.classList.contains('footer-expand')) {
                     footer.classList.remove('footer-expand');
@@ -61,158 +61,160 @@
             </ul>
         </nav>
     </header>
-    <div class = "sidebar">
-        <button id="hamburgerbutton"  aria-pressed="false">
-            <img src = "images/Hamburger_icon.svg.png" alt = "Hamburger menu icon">
-        </button>
-        <div class = "navlinks">
-            <a href = "index.html">
-                Home
-            </a>
-            <a class = "active" href = "pets.html">
-                Pets
-            </a>
-            <a class = "sublink" href = "pets.html#rocket">
-                Rocket
-            </a>
-            <a class = "sublink" href = "pets.html#lulu">
-                Lulu
-            </a>
-            <a class = "sublink" href = "pets.html#chako">
-                Chako
-            </a>
-            <a href = "recipes.html">
-                Recipes
-            </a>
-            <a class = "sublink" href = "recipes.html#mac">
-                Homemade Mac & Cheese
-            </a>
-            <a class = "sublink" href = "recipes.html#pancakes">
-                Swedish Pancakes
-            </a>
-            <a class = "sublink" href = "recipes.html#fritters">
-                Zucchini Fritters
-            </a>
-            <a href = "travel.html">
-                Travel
-            </a>
-            <a class = "sublink" href = "travel.html#vermont">
-                Vermont
-            </a>
-            <a class = "sublink" href = "travel.html#shanghai">
-                Shanghai
-            </a>
-            <a class = "sublink" href = "travel.html#rome">
-                Rome
-            </a>
-            <a class = "sublink" href = "travel.html#monteverde">
-                Monteverde
-            </a>
-            <a class = "sublink" href = "travel.html#seattle">
-                Seattle
-            </a>
-        </div>
-    </div>
     <main id="main">
-        <h1>Pets</h1>
-        <div>
-            <hr class="solid">
-            <h2 id = "rocket">Rocket</h2>
-            <div class = "grid1">
-                <div class = "grid-item">
-                    <img src="images/rocket_primary.jpg" alt="Cute, small and yellow pomeranian">
-                </div>
+        <div class = "sidebar">
+            <button id="hamburgerbutton"  aria-pressed="false">
+                <img src = "images/Hamburger_icon.svg.png" alt = "Hamburger menu icon">
+            </button>
+            <div class = "navlinks">
+                <a href = "index.html">
+                    Home
+                </a>
+                <a class = "active" href = "pets.html">
+                    Pets
+                </a>
+                <a class = "sublink" href = "pets.html#rocket">
+                    Rocket
+                </a>
+                <a class = "sublink" href = "pets.html#lulu">
+                    Lulu
+                </a>
+                <a class = "sublink" href = "pets.html#chako">
+                    Chako
+                </a>
+                <a href = "recipes.html">
+                    Recipes
+                </a>
+                <a class = "sublink" href = "recipes.html#mac">
+                    Homemade Mac & Cheese
+                </a>
+                <a class = "sublink" href = "recipes.html#pancakes">
+                    Swedish Pancakes
+                </a>
+                <a class = "sublink" href = "recipes.html#fritters">
+                    Zucchini Fritters
+                </a>
+                <a href = "travel.html">
+                    Travel
+                </a>
+                <a class = "sublink" href = "travel.html#vermont">
+                    Vermont
+                </a>
+                <a class = "sublink" href = "travel.html#shanghai">
+                    Shanghai
+                </a>
+                <a class = "sublink" href = "travel.html#rome">
+                    Rome
+                </a>
+                <a class = "sublink" href = "travel.html#monteverde">
+                    Monteverde
+                </a>
+                <a class = "sublink" href = "travel.html#seattle">
+                    Seattle
+                </a>
             </div>
-            <p>Rocket (also named huihui) is a 6-month pomeranian puppy with big eyes and a small, black cute nose. Rocket is named rocket because he runs so fast and energetic all day without even having some rest. Rocket loves to carry his little toy walking around the house and jumping towards my bed.</p> 
-            <p>Rocket is friendly to all human beings. He will be a little shy at first, but will 'say hi' to you after a few seconds. He is also friendly to dogs, especially the small breed, because the large size dogs are hard for him to smell lol. If you meet rocket, don't hesitate to say hi to him!! He will be super happy the whole day.</p>
-            <h3>Photo Gallery:</h3>
-            <div class = "grid2">
-                <div class = "grid-item">
-                    <img src="images/rocket_dinner.jpg" alt = "Rocket is eating his dinner.">
-                </div>
-                <div class = "grid-item">
-                    <img src="images/rocket_wants_to_go_out.jpg"  alt="Rocket wants to come out of the playpen.">
-                </div>
-                <div class = "grid-item">
-                    <video controls>
-                        <source src="images/rocket_kitchen_clip.mp4">
-                        Your browser does not support the video tag. This was a video Rocket is trying to hunt the kitchen.
-                    </video>
-                </div>
-                <div class = "grid-item">
-                    <img src="images/rocket_childhood.jpg"  alt="Rocket is in his childhood.">
-                </div>
-            </div>
-            <h3>Likes:</h3>
-            <ul>
-                <li>Chewing bones</li>
-                <li>Chasing</li>
-                <li>Running</li>
-            </ul>
         </div>
-        <div>
-            <hr class="solid">
-            <h2 id = "lulu">Lulu</h2>
-            <div class = "grid1">
-                <div class = "grid-item">
-                    <img src="images/lulu-1.jpg" alt="A chubby guinea pig with patches of dark-brown and white.">
+        <div class = "maincontent">
+            <h1>Pets</h1>
+            <div>
+                <hr class="solid">
+                <h2 id = "rocket">Rocket</h2>
+                <div class = "grid1">
+                    <div class = "grid-item">
+                        <img src="images/rocket_primary.jpg" alt="Cute, small and yellow pomeranian">
+                    </div>
                 </div>
+                <p>Rocket (also named huihui) is a 6-month pomeranian puppy with big eyes and a small, black cute nose. Rocket is named rocket because he runs so fast and energetic all day without even having some rest. Rocket loves to carry his little toy walking around the house and jumping towards my bed.</p> 
+                <p>Rocket is friendly to all human beings. He will be a little shy at first, but will 'say hi' to you after a few seconds. He is also friendly to dogs, especially the small breed, because the large size dogs are hard for him to smell lol. If you meet rocket, don't hesitate to say hi to him!! He will be super happy the whole day.</p>
+                <h3>Photo Gallery:</h3>
+                <div class = "grid2">
+                    <div class = "grid-item">
+                        <img src="images/rocket_dinner.jpg" alt = "Rocket is eating his dinner.">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/rocket_wants_to_go_out.jpg"  alt="Rocket wants to come out of the playpen.">
+                    </div>
+                    <div class = "grid-item">
+                        <video controls>
+                            <source src="images/rocket_kitchen_clip.mp4">
+                            Your browser does not support the video tag. This was a video Rocket is trying to hunt the kitchen.
+                        </video>
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/rocket_childhood.jpg"  alt="Rocket is in his childhood.">
+                    </div>
+                </div>
+                <h3>Likes:</h3>
+                <ul>
+                    <li>Chewing bones</li>
+                    <li>Chasing</li>
+                    <li>Running</li>
+                </ul>
             </div>
-            <p>Lulu is a lively guinea pig who enjoys eating carrots and peppers. When not given any carrots or peppers she will squeak.</p> 
-            <p>Lulu is very adventurous, she will explore her surroundings looking for food and is not afraid.</p>
-            <h3>Photo Gallery:</h3>
-            <div class = "grid2">
-                <div class = "grid-item">
-                    <img src="images/lulu-eating-1.JPG" alt = "Lulu enjoying a pepper">
+            <div>
+                <hr class="solid">
+                <h2 id = "lulu">Lulu</h2>
+                <div class = "grid1">
+                    <div class = "grid-item">
+                        <img src="images/lulu-1.jpg" alt="A chubby guinea pig with patches of dark-brown and white.">
+                    </div>
                 </div>
-                <div class = "grid-item">
-                    <img src="images/lulu-sleeping-1.jpg" alt="Lulu sleeping in a green house">
+                <p>Lulu is a lively guinea pig who enjoys eating carrots and peppers. When not given any carrots or peppers she will squeak.</p> 
+                <p>Lulu is very adventurous, she will explore her surroundings looking for food and is not afraid.</p>
+                <h3>Photo Gallery:</h3>
+                <div class = "grid2">
+                    <div class = "grid-item">
+                        <img src="images/lulu-eating-1.JPG" alt = "Lulu enjoying a pepper">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/lulu-sleeping-1.jpg" alt="Lulu sleeping in a green house">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/lulu-sleeping-2.jpg" alt="Lulu sleeping in a gray house">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/lulu-2.jpg" alt="Lulu sniffing the camera">
+                    </div>
                 </div>
-                <div class = "grid-item">
-                    <img src="images/lulu-sleeping-2.jpg" alt="Lulu sleeping in a gray house">
-                </div>
-                <div class = "grid-item">
-                    <img src="images/lulu-2.jpg" alt="Lulu sniffing the camera">
-                </div>
+                <h3>Likes:</h3>
+                <ul>
+                    <li>Peppers</li>
+                    <li>Carrots</li>
+                    <li>Sleeping</li>
+                </ul>
             </div>
-            <h3>Likes:</h3>
-            <ul>
-                <li>Peppers</li>
-                <li>Carrots</li>
-                <li>Sleeping</li>
-            </ul>
-        </div>
-        <div>
-            <hr class="solid">
-            <h2 id = "chako">Chako</h2>
-            <div class = "grid1">
-                <div class = "grid-item">
-                    <img src="images/Chako1.jpg" alt="Black and Tan color Shiba Inu">
+            <div>
+                <hr class="solid">
+                <h2 id = "chako">Chako</h2>
+                <div class = "grid1">
+                    <div class = "grid-item">
+                        <img src="images/Chako1.jpg" alt="Black and Tan color Shiba Inu">
+                    </div>
                 </div>
+                <p>With a coat as dark as midnight but eyes as bright as stars, he seemed to embody both the mystery and the exuberance of life itself. Agile and playful, he danced around the park as if the grass were his personal stage, captivating everyone with his vivacity.</p> 
+                <p>Yet, when at home, Chako transformed into a zen master. He would curl up on his favorite rug, eyes half-closed in contemplation, as if solving the great puzzles of the universe. Both spirited and serene, Mochi was a living testament to the richness of dualities, teaching his human companions that one could be many things all at once.</p>
+                <h3>Photo Gallery:</h3>
+                <div class = "grid2">
+                    <div class = "grid-item">
+                        <img src="images/Chako2.jpg" alt = "Chako is lazy but still wants to look outside.">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/Chako3.jpg" alt="Chako is so tired and he is having a good night's sleep.">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/Chako4.jpg" alt="Chako doesn't want to move, so he sits there and watches.">
+                    </div>
+                    <div class = "grid-item">
+                        <img src="images/Chako5.jpg" alt="Chako loves comfortable beds.">
+                    </div>
+                </div>
+                <h3>Likes:</h3>
+                <ul>
+                    <li>Sleep</li>
+                    <li>Play</li>
+                    <li>Eat</li>
+                </ul>
             </div>
-            <p>With a coat as dark as midnight but eyes as bright as stars, he seemed to embody both the mystery and the exuberance of life itself. Agile and playful, he danced around the park as if the grass were his personal stage, captivating everyone with his vivacity.</p> 
-            <p>Yet, when at home, Chako transformed into a zen master. He would curl up on his favorite rug, eyes half-closed in contemplation, as if solving the great puzzles of the universe. Both spirited and serene, Mochi was a living testament to the richness of dualities, teaching his human companions that one could be many things all at once.</p>
-            <h3>Photo Gallery:</h3>
-            <div class = "grid2">
-                <div class = "grid-item">
-                    <img src="images/Chako2.jpg" alt = "Chako is lazy but still wants to look outside.">
-                </div>
-                <div class = "grid-item">
-                    <img src="images/Chako3.jpg" alt="Chako is so tired and he is having a good night's sleep.">
-                </div>
-                <div class = "grid-item">
-                    <img src="images/Chako4.jpg" alt="Chako doesn't want to move, so he sits there and watches.">
-                </div>
-                <div class = "grid-item">
-                    <img src="images/Chako5.jpg" alt="Chako loves comfortable beds.">
-                </div>
-            </div>
-            <h3>Likes:</h3>
-            <ul>
-                <li>Sleep</li>
-                <li>Play</li>
-                <li>Eat</li>
-            </ul>
         </div>
     </main>
     <footer>

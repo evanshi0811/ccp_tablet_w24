@@ -191,7 +191,7 @@ hr {
     nav {
         display: none;
     }
-    main {
+    .maincontent {
         margin-left: 50px;
     }
     footer {
@@ -224,10 +224,10 @@ hr {
     .sidebar-expand {
         width: 200px;
     }
-    .main-collapse {
+    .maincontent-collapse {
         margin-left: 50px;
     }
-    .main-expand {
+    .maincontent-expand {
         margin-left: 200px;
     }
     .footer-collapse {
