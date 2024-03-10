@@ -11,6 +11,7 @@
             var button = document.getElementById('hamburgerbutton');
             var sidebar = document.querySelector('.sidebar');
             var main = document.querySelector('main');
+            var footer = document.querySelector('footer');
             var navlinks = document.querySelector('.navlinks');
 
             button.addEventListener('click', function() {
@@ -27,6 +28,13 @@
                 } else {
                     main.classList.remove('main-collapse');
                     main.classList.add('main-expand');
+                }
+                if (footer.classList.contains('footer-expand')) {
+                    footer.classList.remove('footer-expand');
+                    footer.classList.add('footer-collapse');
+                } else {
+                    footer.classList.remove('footer-collapse');
+                    footer.classList.add('footer-expand');
                 }
                 if (navlinks.classList.contains('navlinks-expand')) {
                     navlinks.classList.remove('navlinks-expand');
